@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Star Wars RPG Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default">
+  <div class="panel-body">
+    CHOOSE YOUR CHARACTER
+  </div>
+</div>
+		<div class="row">
+		  <div class="col-xs-2">
+		    <a href="#" class="thumbnail thumbnail1" id="1">
+		      <img src="assets/images/luke.jpg" alt="luke skywalker">Luke Skywalker
+				</a>
+
+		  </div>
+		  <div class="col-xs-2">
+		    <a href="#" class="thumbnail thumbnail2" id="2">
+		      <img src="assets/images/darthvader.jpg" alt="darth vader">Darth Vader
+		    </a>
+		  </div>
+		  <div class="col-xs-2">
+		    <a href="#" class="thumbnail thumbnail3" id="three">
+		      <img src="assets/images/stormtrooper.jpg" alt="stormtrooper">Storm Trooper
+		    </a>
+		  </div>
+		  <div class="col-xs-2">
+		    <a href="#" class="thumbnail thumbnail4" id="4">
+		      <img src="assets/images/yoda.jpg" alt="yoda">Yoda
+		    </a>
+		  </div>
+
+		</div>
+<!-- Container for Non-Chosen Enemies -->
+
+		<div class="holdingArea">Enemies Available to Attack:</div>
+
+
+
+<!-- FIGHT SECTION -->
+		<div class="fightSection">
+				<button class="btn btn-default btn-xs attackButton">Attack</button>
+		<div>
+
+
+<!-- Defender Area -->
+		<div class="defenderArea">DEFENDER<div>
+
+	
+
+
+
+	<script>
+
+
+
+	/*Player chooses character
+
+
+		Every character that was not picked becomes an enemy on a new line
+
+		The player chooses which enemy they will attack by clicking on that enemy's picture and enemy moves to "defender area"
+
+	CREATE LOOP TO DO THIS:
+	When attack button is clicked... 
+			While Player Character Health Points > 0 && Defender Health Points > 0:
+			
+							Player Character Health Points stay constant AND
+							Defender LOSES Health Points
+								
+							Defender Counter Attacks AND
+							Player Character LOSES Health Points
+			
+			WHEN
+							health points of Defender <= 0 
+								move Defender out of "Defender Area"
+								Player can now choose another enemy to attack
+
+							Player character health points <= 0
+								Game over, show reset button. 
+
+	
+
+	CREATE RESET BUTTON TO:
+			move all characters back to original spot.  start game again.
+
+
+
+
+
+
+
+
+
+
+		$(document).ready(function(){
+
+			$(".thumbnail1").on("click", function(){
+						$("#1").animate({opacity: '.5'});
+					});
+			$(".thumbnail2").on("click", function(){
+						$("#2").animate({width: '500px'});
+					});
+			$(".thumbnail3").on("click", function(){
+						$("#three").animate({right: '500px'});
+					});
+			$(".thumbnail4").on("click", function(){
+						$("#4").animate({height: '500px'});
+					});
+		 })
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
